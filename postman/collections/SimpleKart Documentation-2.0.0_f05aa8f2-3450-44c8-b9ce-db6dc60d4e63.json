@@ -1,0 +1,906 @@
+{
+	"info": {
+		"_postman_id": "7d26c624-82ca-4082-9565-dd0be9b84b3d",
+		"name": "SimpleKart Documentation-2.0.0",
+		"description": "The SimpleKart REST API demonstrates the API Builder capabilities in Postman using an imaginary E-Commerce. It provides endpoints for retrieving items or orders and their details from a database as well as adding order details to a database.\n\n> This API is built on top of a mock server, this means the data is static and can't be edited.\n\n# Getting Started\n\nMake sure that you have the `Prod` environment selected in Postman ([learn more about environments](https://learning.postman.com/docs/postman/variables-and-environments/variables/#environments-in-postman)) and you will be able to start sending request to the SimpleKart API.\n\n# Contact Support\n\n- Name: Postman Team\n- Email: simplekart@postman.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Get items from the database",
+					"id": "eaba451e-268a-4ff5-b31e-86db8b578799",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{x-api-key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key-2",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items"
+							]
+						},
+						"description": "Pull a list of items from item database"
+					},
+					"response": [
+						{
+							"id": "d65eded7-ff9c-42d2-bdb8-3522e7290088",
+							"name": "OK - Successful pull of items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/items?list=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "list",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n [\n  {\n   \"itemId\": 11397,\n   \"name\": \"Example Data\",\n   \"price\": 54753,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5162,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 38604,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 29,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 5099,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4695,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 31828,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13797,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 49938,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14254,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 2057,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10330,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 38284,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14573,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 20461,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5629,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 37756,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 11729,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 48842,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14399,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 97803,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16365,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 73124,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3231,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 65934,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19189,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 99534,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8556,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 57314,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 8102,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 26949,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15258,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 49561,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14750,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 86318,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10207,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 31742,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8754,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 52024,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 11890,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 15493,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17648,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 75834,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10317,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 89713,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3863,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 51440,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13711,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 83985,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16623,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 31753,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6164,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 34689,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2678,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 36957,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 762,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 43068,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2004,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 78993,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 10956,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 13670,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 7906,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 25265,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 1276,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 35796,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4737,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 26801,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13525,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 67594,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13767,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 69521,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14922,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 53614,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 1698,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 47719,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13140,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 50388,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19725,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 81112,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8611,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 14524,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5894,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 61225,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14692,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 39125,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19925,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 70277,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16133,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 15023,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 15527,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 13496,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3822,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 18489,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 9942,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 71591,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17017,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 29512,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12697,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 30497,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 7766,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 79595,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3233,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 32591,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16742,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 28317,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18664,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 20491,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10452,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 5765,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 9498,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 33634,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15592,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 37443,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19990,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 16680,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10156,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 88997,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18929,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 87139,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 5327,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 7042,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 112,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 97072,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12822,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 80689,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3026,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 81535,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 1572,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 30528,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5609,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 3427,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 164,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 17090,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 9064,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 55661,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10874,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 77847,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17769,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 55805,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6623,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 70730,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12618,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 7751,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3237,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 87627,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5130,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 26855,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8403,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 27430,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 6021,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 73132,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10114,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 53063,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2750,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 74890,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19868,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 52501,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17212,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 9448,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6717,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 95162,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 500,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 34707,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10501,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 46961,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10041,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 9208,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4672,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 43506,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17813,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 61854,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 552,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 67602,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8105,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 20964,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17848,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 5255,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5077,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 10706,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 13953,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 10771,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18621,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 75843,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17613,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 41878,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18347,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 97905,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4338,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 93170,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15219,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 72686,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19743,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 74583,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3910,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 51064,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14769,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 20598,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18612,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 88107,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19746,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 47090,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 11106,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 57702,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6278,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 2613,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10991,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 34681,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13300,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 52261,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 1388,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 68372,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10613,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 89841,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14181,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 29442,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 7603,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 89922,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2789,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 80717,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12323,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 19938,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16003,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 64031,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 11023,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 89173,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3286,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 78937,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18997,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 83230,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3988,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 62532,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 9158,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 44552,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10222,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 19827,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14009,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 10122,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 9427,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 75839,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 14173,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 46640,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16400,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 88802,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16520,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 31619,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 7944,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 58239,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17623,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 36210,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19439,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 12982,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 7871,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 5384,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15967,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 58998,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5962,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 37761,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3770,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 4284,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 791,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 71134,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15891,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 43977,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6662,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 78327,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8404,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 25677,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 14644,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 67898,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 9043,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 15293,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6737,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 40223,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16997,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 21464,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15249,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 47069,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 11200,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 64530,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19124,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 18340,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13735,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 51307,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 1471,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 59225,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5264,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 18332,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12217,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 12638,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8653,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 29098,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 927,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 72722,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 270,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 16591,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15866,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 87636,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10370,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 65591,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n [\n  {\n   \"itemId\": 6048,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 90838,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 18262,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 91771,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4635,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 33621,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 5713,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 29197,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4363,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 6455,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10151,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 34914,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15157,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 91010,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16731,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 53345,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 19436,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 86517,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6717,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 67995,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6820,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 25764,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16752,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 89202,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 15005,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 51679,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2613,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 54550,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17367,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 46085,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ]\n]"
+						},
+						{
+							"id": "36730db0-9dc4-48a9-a52d-511ee642dd17",
+							"name": "Error - Get items from the database",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/items?error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"items"
+									],
+									"query": [
+										{
+											"key": "error",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "this is an error"
+						}
+					]
+				},
+				{
+					"name": "Get item from the database",
+					"id": "b4900db0-ff43-49bb-855a-4b497bbb8bd1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/:itemId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"id": "ef18dc0d-2a3b-4fd1-85bc-ed8e17808d40",
+									"key": "itemId",
+									"value": "3136",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Obtain item details from item database"
+					},
+					"response": [
+						{
+							"id": "bc60df85-14db-4a71-aab7-ab8d6d8a93ee",
+							"name": "Bad Request - Invalid item ID supplied",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/items/:itemId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"items",
+										":itemId"
+									],
+									"variable": [
+										{
+											"key": "itemId",
+											"value": "invalid_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n\t\"error\": {\n\t\t\"message\": \"Provided Id is invalid\"\n\t}\n}"
+						},
+						{
+							"id": "f99747b7-5c49-4b12-953e-86603431877a",
+							"name": "OK - Successfully obtained order details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/items/:itemId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"items",
+										":itemId"
+									],
+									"variable": [
+										{
+											"key": "itemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"itemId\": 1657,\n    \"name\": \"Smart WiFi Router\",\n    \"price\": 2096,\n    \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n}"
+						},
+						{
+							"id": "411793a7-0d03-4e02-842c-acdfd2566787",
+							"name": "Not Found - Item not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/items/:itemId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"items",
+										":itemId"
+									],
+									"variable": [
+										{
+											"key": "itemId"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n\t\"error\": {\n\t\t\"message\": \"The item you are looking for, does not exist\"\n\t}\n}"
+						},
+						{
+							"id": "be57cbd9-8122-4863-8303-25f8399296ea",
+							"name": "Get item details from the database - Postman Merch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://fffc2eb4-dbcf-4c6d-bc30-c3cb2e7ecfa6.mock.pstmn.io/items/:itemId",
+									"protocol": "https",
+									"host": [
+										"fffc2eb4-dbcf-4c6d-bc30-c3cb2e7ecfa6",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"items",
+										":itemId"
+									],
+									"variable": [
+										{
+											"key": "itemId",
+											"value": "16247",
+											"description": "(Required) Id of the item to pull details of"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									},
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"itemId\": 16247,\n    \"name\": \"Postman Merch\",\n    \"price\": 15,\n    \"description\": \"Official T-shirt for the Postman community.\",\n    \"name2\": \"stan\"\n\n}"
+						}
+					],
+					"variable": [
+						{
+							"id": "ef18dc0d-2a3b-4fd1-85bc-ed8e17808d40",
+							"key": "itemId",
+							"value": "3136",
+							"type": "string"
+						}
+					]
+				}
+			],
+			"id": "92c3f8ba-9abc-452d-ab71-42db503dd969",
+			"description": "You can retrieve a list of items or the details of a single item from the `items` database."
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get orders from the database ",
+					"id": "89afe083-9791-43c0-ab3b-569d39ac9dbe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders?list=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"description": "Number of orders to show",
+									"key": "list",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Obtain order details from orders database"
+					},
+					"response": [
+						{
+							"id": "0f6abf64-9a5a-400d-877f-a8e792b590ae",
+							"name": "OK - Successful pull of orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders?list=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									],
+									"query": [
+										{
+											"key": "list",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n {\n  \"orderId\": 674,\n  \"items\": [\n   {\n    \"itemId\": 1657,\n    \"name\": \"Smart WiFi Router\",\n    \"price\": 2096,\n    \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-03T13:07:45.962Z\",\n  \"orderDate\": \"2020-03-01T19:27:26.733Z\",\n  \"orderTotal\": 2096,\n  \"address\": \"95 Tarkiln Hill St.Laurel, MD 20707\"\n },\n {\n  \"orderId\": 675,\n  \"items\": [\n   {\n    \"itemId\": 1658,\n    \"name\": \"VR Gaming Headset\",\n    \"price\": 79990,\n    \"description\": \"VR Gaming Headset puts you at the center of virtual reality's most pulse-pounding, PC-powered gameplay. See the action unfold all around you through our sharpest lenses and next-generation optics. Lose yourself in the experience with a comfortable, improved design that lets you start playing faster and keep playing longer. Insight tracking gives you the power to move throughout your playspace in any direction. No external sensors. No complicated setup. Just hands-on action and interaction with our updated Oculus Touch controllers right out of the box. Step into the game and the future of PC VR.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-03T15:00:56.787Z\",\n  \"orderDate\": \"2020-03-02T21:25:22.096Z\",\n  \"orderTotal\": 79990,\n  \"address\": \"7405 Arcadia St.Rockville, MD 20850\"\n },\n {\n  \"orderId\": 676,\n  \"items\": [\n   {\n    \"itemId\": 1665,\n    \"name\": \"Smart Watch\",\n    \"price\": 1805,\n    \"description\": \"Built-in Multi-Sports Mode, record your Running, Cycling, Football, Swimming, Table Tennis, Badminton, Climbing, recording your daily sports data.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-05T17:30:15.156Z\",\n  \"orderDate\": \"2020-03-03T01:10:27.512Z\",\n  \"orderTotal\": 1805,\n  \"address\": \"9791 Lawrence Dr.Marlton, NJ 08053r\"\n },\n {\n  \"orderId\": 677,\n  \"items\": [\n   {\n    \"itemId\": 1659,\n    \"name\": \"Classic Loop Top Shaker Bottle, 20-Ounce\",\n    \"price\": 578,\n    \"description\": \"Easy to maintain proper nutrition and hydration on-the-go.The wide mouth makes it easy to add scoops of powdered mixes, meal ingredients, and liquids, and embossed markings show both ounces and milliliters for easy measuring anywhere (note that markings on the 20-ounce capacity shaker cup only go up to 12 ounces). Bottle contents and liquids are securely contained thanks to a tightly threaded screw-on lid that creates a leakproof seal, and a flip cap that snaps securely shut for shaking and transportation.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-03T18:16:24.911Z\",\n  \"orderDate\": \"2020-03-01T06:09:23.007Z\",\n  \"orderTotal\": 578,\n  \"address\": \"822 Clay St.Tampa, FL 33604\"\n },\n {\n  \"orderId\": 678,\n  \"items\": [\n   {\n    \"itemId\": 1663,\n    \"name\": \"Hair Dryer\",\n    \"price\": 1400,\n    \"description\": \"Hair dryer is engineered to protect hair from extreme heat damage, with the fastest drying+ and controlled styling to help increase smoothness by 75%, increase shine by up to 132% and decrease frizz and flyaways by up to 61%.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-04T12:09:07.955Z\",\n  \"orderDate\": \"2020-03-02T21:50:44.173Z\",\n  \"orderTotal\": 1400,\n  \"address\": \"7444 SW. State Ave.Philadelphia, PA 19111\"\n },\n {\n  \"orderId\": 679,\n  \"items\": [\n   {\n    \"itemId\": 1660,\n    \"name\": \"4-Port USB 2.0 Hub\",\n    \"price\": 505,\n    \"description\": \"Easily add up to 4 devices with the USB 2.0 Hub. Particularly great for recent notebooks that provide a limited number of USB ports. Achieve full 480 Mbps on each port, or daisy-chain multiple hubs to a maximum of 127 devices.Fully backwards compatible with the USB 1.1 products.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-04T11:29:56.99Z\",\n  \"orderDate\": \"2020-03-03T00:51:26.19Z\",\n  \"orderTotal\": 505,\n  \"address\": \"307 Purple Finch Ave.New Lenox, IL 60451\"\n },\n {\n  \"orderId\": 680,\n  \"items\": [\n   {\n    \"itemId\": 1661,\n    \"name\": \"Wipes Flushable Wet Wipes Dispenser, Mint Chill, 48 Count (Pack of 3)\",\n    \"price\": 938,\n    \"description\": \"For a superior clean thatâs fresh, gentle, and effective, choose Wipes with the CleaningRipples Texture. Wipes are 100 percent flushable, remove odor causing bacteria and offer a large, dual layer wipe to clean better than when using dry toilet paper alone.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-04T02:06:58.886Z\",\n  \"orderDate\": \"2020-03-02T04:33:52.652Z\",\n  \"orderTotal\": 938,\n  \"address\": \"946 Holly StreetHamilton, OH 45011\"\n },\n {\n  \"orderId\": 681,\n  \"items\": [\n   {\n    \"itemId\": 1663,\n    \"name\": \"Hair Dryer\",\n    \"price\": 1400,\n    \"description\": \"Hair dryer is engineered to protect hair from extreme heat damage, with the fastest drying+ and controlled styling to help increase smoothness by 75%, increase shine by up to 132% and decrease frizz and flyaways by up to 61%.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-04T17:26:07.706Z\",\n  \"orderDate\": \"2020-03-02T04:17:23.689Z\",\n  \"orderTotal\": 1400,\n  \"address\": \"8924 East Birchwood St.Hamburg, NY 14075\"\n },\n {\n  \"orderId\": 682,\n  \"items\": [\n   {\n    \"itemId\": 1665,\n    \"name\": \"Smart Watch\",\n    \"price\": 1805,\n    \"description\": \"Built-in Multi-Sports Mode, record your Running, Cycling, Football, Swimming, Table Tennis, Badminton, Climbing, recording your daily sports data.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-05T14:07:01.688Z\",\n  \"orderDate\": \"2020-03-03T04:58:18.504Z\",\n  \"orderTotal\": 1805,\n  \"address\": \"10 Wilson LaneBay City, MI 48706\"\n },\n {\n  \"orderId\": 683,\n  \"items\": [\n   {\n    \"itemId\": 1666,\n    \"name\": \"Learning Thermostat, 3rd Gen, Smart Thermostat\",\n    \"price\": 15746,\n    \"description\": \"Learning Thermostat is a smart thermostat that learns what temperatures you like, turns itself down when youâre away and connects to your phone. It has a big, sharp display. And itâs proven to help save energy. In independent studies, the Thermostat saved an average of 10% to 12% on heating bills and 15% on cooling bills.\"\n   }\n  ],\n  \"arrivalDate\": \"2020-03-05T10:43:23.713Z\",\n  \"orderDate\": \"2020-03-03T08:34:21.21Z\",\n  \"orderTotal\": 15746,\n  \"address\": \"m81 West Shirley Dr.Greenfield, IN 46140\"\n },\n {\n  \"orderId\": 656,\n  \"items\": [\n   {\n    \"itemId\": 16247,\n    \"name\": \"Postman Merch\",\n    \"price\": 15,\n    \"description\": \"Official Merch for the Postman community.\"\n   }\n  ],\n  \"arrivalDate\": \"2019-05-09T12:42:21.165Z\",\n  \"orderDate\": \"2020-03-06T19:27:26.733Z\",\n  \"orderTotal\": 15,\n  \"address\": \"SimpleKart HQ, 221B Baker street\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post order details to the database",
+					"id": "2ffc5f4b-603a-4cbc-b033-0bb014802eb6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"<string>\",\n    \"item\": {\n        \"itemId\": 1,\n        \"name\": \"<string>\",\n        \"price\": 2000,\n        \"description\": \"<string>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						},
+						"description": "Post item order to orders database"
+					},
+					"response": [
+						{
+							"id": "850cd153-d77f-45ce-a4b6-660dae1dd2b0",
+							"name": "Ok - Postman Merch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"SimpleKart HQ, 221B Baker street\",\n    \"items\": [\n        {\n            \"itemId\": 16247,\n            \"name\": \"Postman Merch\",\n            \"price\": 15,\n            \"description\": \"Official T-shirt for the Postman community.\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://fffc2eb4-dbcf-4c6d-bc30-c3cb2e7ecfa6.mock.pstmn.io/orders",
+									"protocol": "https",
+									"host": [
+										"fffc2eb4-dbcf-4c6d-bc30-c3cb2e7ecfa6",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									},
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"orderId\": 656,\n \"items\": [\n  {\n   \"itemId\": 16247,\n   \"name\": \"Postman Merch\",\n   \"price\": 15,\n   \"description\": \"Official Merch for the Postman community.\"\n  }\n ],\n \"arrivalDate\": \"2004-07-12T03:13:03.460Z\",\n \"orderDate\": \"2020-03-06T19:27:26.733Z\",\n \"orderTotal\": 15,\n \"address\": \"SimpleKart HQ, 221B Baker street\"\n}"
+						},
+						{
+							"id": "ab2da8be-da75-45f3-87e6-909aabe63ab6",
+							"name": "OK - Order created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"name": "Content-Type",
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"items\": [\n        {\n            \"itemId\": 1657,\n            \"name\": \"Smart WiFi Router\",\n            \"price\": 2096,\n            \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n        }\n    ],\n    \"address\": \"95 Tarkiln Hill St.Laurel, MD 20707\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"orderId\": 674,\n \"items\": [\n  {\n   \"itemId\": 1657,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 2096,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n \"arrivalDate\": \"2004-07-12T03:13:03.460Z\",\n \"orderDate\": \"2020-03-06T19:27:26.733Z\",\n \"orderTotal\": 2096,\n \"address\": \"95 Tarkiln Hill St.Laurel, MD 20707\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get order details from database",
+					"id": "f417ea64-4273-46b7-84c0-6a20b8164d33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders/:orderId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "1619"
+								}
+							]
+						},
+						"description": "Obtain item details from the database"
+					},
+					"response": [
+						{
+							"id": "0c0282d0-1994-4560-a167-11df644acad3",
+							"name": "Ok - Postman Merch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:orderId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "656"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									},
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"orderId\": 656,\n \"items\": [\n  {\n   \"itemId\": 16247,\n   \"name\": \"Postman Merch\",\n   \"price\": 15,\n   \"description\": \"Official Merch for the Postman community.\"\n  }\n ],\n \"arrivalDate\": \"2004-07-12T03:13:03.460Z\",\n \"orderDate\": \"2020-03-06T19:27:26.733Z\",\n \"orderTotal\": 15,\n \"address\": \"SimpleKart HQ, 221B Baker street\"\n}"
+						},
+						{
+							"id": "2312f67a-eb51-4961-b1af-e801a2a5fd2b",
+							"name": "Not Found - Order not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:orderId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n\t\"error\": {\n\t\t\"message\": \"The order you are looking for does not exist\"\n\t}\n}"
+						},
+						{
+							"id": "b660f993-cf80-4655-8ab1-0dd15b45db71",
+							"name": "Bad Request - Invalid order ID supplied",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:orderId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "674"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n\t\"error\": {\n\t\t\"message\": \"Invalid id is provided.\"\n\t}\n}"
+						},
+						{
+							"id": "834e40bb-a74c-4152-b689-b6aad3e29400",
+							"name": "403 Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/70938243034498",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										"70938243034498"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n\t\"error\":\"Forbidden\"\n}"
+						},
+						{
+							"id": "a540fd90-712b-4ffb-b290-66838e7e8400",
+							"name": "OK - Successfully obtained order details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/orders/:orderId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "674"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"orderId\": 674,\n \"items\": [\n  {\n   \"itemId\": 10916,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 52272,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4653,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 30546,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6399,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 7107,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 16780,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 25792,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 6721,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 94944,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 13755,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 9039,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 8174,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 10874,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 2932,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 27849,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4712,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 53794,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10639,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 98066,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 12107,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 88311,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 3676,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 94365,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 17215,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 50257,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 4268,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 12738,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  },\n  {\n   \"itemId\": 10126,\n   \"name\": \"Smart WiFi Router\",\n   \"price\": 38835,\n   \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\"\n  }\n ],\n \"arrivalDate\": \"2004-07-12T03:13:03.460Z\",\n \"orderDate\": \"2020-03-06T19:27:26.733Z\",\n \"orderTotal\": 2096,\n \"address\": \"95 Tarkiln Hill St.Laurel, MD 20707\"\n}"
+						}
+					]
+				}
+			],
+			"id": "90099b7a-4bdd-4c04-9143-87ac512a2962",
+			"description": "You can retrieve a list of orders or the details of a single order from the `orders` database."
+		},
+		{
+			"name": "âAdd item to cartâ",
+			"id": "cc5309b7-ee36-4eb0-8bda-1f8cb59ab91b",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/items/:itemId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": "8212",
+							"description": "(Required) Id of the item to pull details of",
+							"id": "3a5a90bf-1754-4d17-acfc-072ba14fb080",
+							"type": "any"
+						}
+					]
+				},
+				"description": "Obtain item details from item database"
+			},
+			"response": [
+				{
+					"id": "07dc538c-ed82-4973-8ee2-aa1139086cec",
+					"name": "OK - Successfully added order to cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/:itemId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "itemId"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n \"itemId\": 1657,\n \"name\": \"Smart WiFi Router\",\n \"price\": 2096,\n \"description\": \"Wifi router/wireless router. One of routers for wireless internet, wireless routers for home. Dual band router and gigabit router. Ideal as internet router also gaming router. Long range coverage with high speed. Compatible with all 802.11ac devices and below. 5ghz router/5g router Frequency Range: 2.4GHz and 5GHz; Interface Available: 4 x 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 1 USB 2.0 Ports; Protocols Supported: Supports IPv4 and IPv6; System Requirement: Microsoft Windows 98SE NT 2000 XP Vista, or Windows 7 Windows 8/8.1/10, MAC OS NetWare UNIX or Linux; Wireless Standards: IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GH\",\n \"quantitiy\": 1\n}"
+				},
+				{
+					"id": "107b03a4-fe79-4a14-89d2-7df5346fdc35",
+					"name": "Bad Request - Invalid item ID supplied",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/:itemId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "itemId"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n \"error\": {\n  \"message\": \"Provided Id is invalid\"\n }\n}"
+				},
+				{
+					"id": "6bd6145f-168c-4979-8bd9-be95ed705390",
+					"name": "Not Found - Item not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/:itemId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "itemId"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n \"error\": {\n  \"message\": \"The item you are looking for, does not exist\"\n }\n}"
+				}
+			],
+			"variable": [
+				{
+					"id": "3a5a90bf-1754-4d17-acfc-072ba14fb080",
+					"key": "itemId",
+					"value": "8212",
+					"type": "any",
+					"description": "(Required) Id of the item to pull details of"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "31b523df-fd18-433e-8e98-c41022a4a76c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "92f8ac2e-70a0-4adf-a2ec-80a079f228c4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "676e67a3-920c-4b52-a355-cd7e6d8045ab",
+			"key": "baseUrl",
+			"value": "https://api.simplekart.com",
+			"type": "string"
+		}
+	]
+}
