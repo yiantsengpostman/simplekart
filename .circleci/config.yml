@@ -13,8 +13,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - newman/newman-run:
-          collection: https://api.getpostman.com/collections/10237495-ac5e27e2-3fbb-4a85-b86c-804a27d5b64b?apikey=PMAK-618d6b992cdd810046c2fa0b-30fc7a5967e7ba9bfb11a55e18e5262571
-          environment: https://api.getpostman.com/environments/10237495-b9409f0b-70ff-445e-bbbe-649eeb05dc07?apikey=PMAK-618d6b992cdd810046c2fa0b-30fc7a5967e7ba9bfb11a55e18e5262571 
+          collection: https://api.getpostman.com/collections/10237495-ac5e27e2-3fbb-4a85-b86c-804a27d5b64b?apikey=POSTMAN_API_KEY
+          environment: https://api.getpostman.com/environments/10237495-b9409f0b-70ff-445e-bbbe-649eeb05dc07?apikey=POSTMAN_API_KEY
 workflows:
   example-workflow:
     jobs:
